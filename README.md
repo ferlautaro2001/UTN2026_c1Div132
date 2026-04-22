@@ -1,7 +1,11 @@
 # UTN 2026 c1 Div 132
 
 ## Frontend
-- Prox clase, repaso rapido hasta backgrounds, avanzamos desde box model y hacemos live coding para estilar una pagina en comun
+- Prox clase, continuamos maquetando la pagina de apple, creamos mas sections y añadimos media queries para ajustar la distribucion en formato mobile
+
+- JavaScript I y II
+
+- Continuamos con la maquetacion de la pagina de apple o una nueva
 
 ---
 
