@@ -14,12 +14,37 @@
         <!-- Atajo para hacer comentarios HTML 
             Ctrl + / 
         -->
-        
+
+        <!-- CDN Content Delivery Network -->
+        <!-- Fuente externa Google Fonts -->
+        <!-- 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+        -->
     </head>
 
 
     <!-- <body> informacion visible -->
     <body>
+
+        <!-- 
+        Combinador descendiente " "
+            Selecciona todos los elmentos descendientes de un elemento padre, sin importar que tan profundo esten en el arbol del DOM
+    
+        Combinador de hijo directo ">"
+            Selecciona solo los elementos que son hijos inmediatos de un elemento padre
+
+        Combinador de hermano adyacente "+"
+            Selecciona un elemento que es hermano inmediato de otro elemento es decir que aparece JUSTO DESPUES de el en el mismo nivel del DOM
+
+        Combinador de hermano general "~"
+            Selecciona TODOS los elementos que son HERMANOS de un elemento pero no necesariamente adyacentes (inmediatos). Estos elementos deben compartir el mismo padre
+        -->
+        <h1>Titulo</h1>
+        <p>Este parrafo sera color purpura porque es hermano del h1</p>
+        <p>Este parrafo tambien sera color purpura</p>
+        
 
         <!-- Encabezado -->
         <header>            

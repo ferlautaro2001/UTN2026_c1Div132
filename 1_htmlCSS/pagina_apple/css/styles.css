@@ -1,0 +1,116 @@
+/* ======================
+    Ajustes generales 
+========================*/
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+
+
+/* ===========
+    Header 
+=============*/
+
+.icono-header svg {
+    width: 17px;
+}
+
+header, header ul, .iconos-container {
+    display: flex;
+    font-size: 12px;
+}
+
+.iconos-container {
+    width: 4%;
+    justify-content: space-around;
+}
+
+header {
+    justify-content: center;
+    align-items: center;
+}
+
+header ul {
+    justify-content: space-around;
+}
+
+nav {
+    width: 45%;
+}
+
+
+
+
+
+/* ========================
+    Guia de maquetacion 
+=========================*/
+/*
+header {
+    border: 1px solid;
+}
+
+.icono-header {
+    border: 1px solid green;
+}
+
+nav {
+    border: 1px solid red;
+}
+
+ul {
+    border: 1px solid blue;
+}
+
+li {
+    border: 1px solid #00ff41;
+}
+
+main, .producto, h2, p, div {
+    border: 1px solid;
+}
+    */
+
+
+/* ========================
+    Contenido principal 
+=========================*/
+main, .producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.producto {
+    width: 100%;
+    /* flex: 1; */
+    height: 691.99px;
+}
+
+.producto h2 {
+    font-size: 56px;
+    margin-bottom: 0;
+}
+
+.producto p {
+    font-size: 28px;
+}
+
+
+.prod-container {
+    display: flex;
+    width: 17%;
+    justify-content: space-between;
+}
+
+#iphone {
+    background: url("https://www.apple.com/v/home/cm/images/heroes/iphone-family/hero_iphone_family__fuz5j2v5xx6y_large.jpg");
+    background-position: bottom;
+    background-size: cover;
+}
