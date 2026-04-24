@@ -51,6 +51,9 @@
 
 ---
 
+#### [Guia Markdown](https://dillinger.io/)
+#### [Documentacion Básica Markdown](https://www.markdownguide.org/basic-syntax/)
+
 ## Recursos Frontend
 - [W3Schools HTML](https://www.w3schools.com/html/default.asp)
 - [W3Schools CSS](https://www.w3schools.com/css/default.asp)
