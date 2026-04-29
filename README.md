@@ -73,3 +73,39 @@
 
 ## Backend
 ### [Clase 2hs Protocolo HTTP y lenguaje HTML](https://www.youtube.com/watch?v=l6oF_RpBf64)
+
+
+---
+
+---
+
+## Nombres de los simbolos de programacion en ingles
+
+Los símbolos de programación tienen nombres específicos en inglés que son fundamentales para la comunicación técnica y la lectura de código. A continuación se detallan los nombres más comunes utilizados en la industria:
+
+*   **~**: Tilde
+*   **#**: Hash
+*   **^** Caret
+*   **\***: Asterisk
+*   **&**: Ampersand
+*   **:**: Colon
+*   **;** Semicolon
+*   **/**: Slash
+*   **\\**: Backslash
+*   **|**: Pipe
+*   **-**: Minus
+*   **_**: Underscore
+*   **'**: Apostrophe
+*   **"**: Quotation Marks
+*   **`**: Grave accent
+*   **@**: At
+*   **()**: Parentheses
+*   **[]**: Square brackets
+*   **{}**: Curly brackets
+*   **<**: Less than
+*   **>**: Greater than
+*   **+**: Plus
+*   **=**: Equal
+*   **$**: Dollar sign
+*   **%**: Percent
+*   **!**: Exclamation mark
