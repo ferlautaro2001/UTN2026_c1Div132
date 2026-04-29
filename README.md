@@ -3,9 +3,7 @@
 ## Frontend
 - Prox clase, continuamos maquetando la pagina de apple, creamos mas sections y añadimos media queries para ajustar la distribucion en formato mobile
 
-- JavaScript I y II
-
-- Continuamos con la maquetacion de la pagina de apple o una nueva
+- **Ejemplo bootstrap subido en el moodle**
 
 ---
 
