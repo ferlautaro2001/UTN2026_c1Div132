@@ -1,5 +1,81 @@
 # JavaScript
 
+---
+
+## JavaScript V / Objetos globales y almacenamiento persistente. Iteracion en arrays, objetos y arrays de objetos
+
+Los objetos globales son aquellos que estan disponibles en todo el entorno de ejecucion sin necesidad de importarlos o declararlos explicitamente.
+
+Varian depende del contexto de ejecucion (el lugar donde se ejecuta JavaScript), el navegador o `Node.js` y **su proposito es facilitar el acceso a ciertas funciones y valores predeterminados**
+
+#### Objetos globales en el navegador
+- En el entorno del navegador, los objetos globales incluyen todos los objetos estandar de JavaScript, como `String`, `Array`, `Object`, etc. Asi como un conjunto de objetos especificos para la interaccion con la pagina web y su entorno
+
+- El objeto global principal del navegador es `window`. Este objeto representa toda la ventana del navegador y actua como el contenedor global para todas las variables, funciones y objetos globales en una pagina web. Todos los objetos, variables y funciones definidos en el ambito global estan autoaticamente disponibles como propiedades del objeto window.
+
+#### Objetos y metodos importantes que vienen de `window`
+- `document`: Representa el DOM de la pagina web actual, permitiendo al acceso y la manipulacion de elementos HTML. `document` lo vemos en JavaScript VI.
+```html
+<p id="parrafo">soy un parrafo</p>
+```
+```js
+let parrafo = document.getElementById("parrafo")
+```
+
+- `alert()`, `prompt()` y `confirm()`: Metodos que permiten mostrar dialogos al usuario y recoger input
+
+- `setTimeout()` y  `setInterval()`: Metodos para programar la ejecucion de codigo despues de un tiempo (setTiemout) o en intervalos regulares (setInterval)
+
+```js
+// Muestra un mensaje por consola despues de 2 segs
+setTimeout(() => {
+    console.log("Hola despues de 2 segundos")
+}, 2000);
+```
+
+- `location`: Proporciona informacion sobre la URL actual de la pagina y permite redireccionar a otras URL
+
+```js
+// URL actual
+console.log(window.location.href)
+```
+
+- `navigator`: Contiene info sobre el navegador, la version, agente de usuario y geolocalizacion
+
+```js
+// Info sobre el navegador
+console.log(navigator.userAgent);
+
+// Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+```
+
+- `console`: Proporciona acceso a la consola del navegador para mostrar mensajes de depuracion
+
+```js
+console.log("Mensaje en la consola");
+```
+
+- `localStorage` y `sessionStorage`: Permiten almacenar datos en el navegador de manera persistente o temporal
+
+```js
+// Seteamos una nueva clave con info
+localStorage.setItem("nombre", "Miguel");
+
+console.log(localStorage.getItem("nombre")); 
+// El valor Miguel queda guardado permanentemente en el navegador hasta que se borre
+```
+
+- `history`: Proporciona acceso al historial de navegacion del navegador
+
+```js
+history.back(); // Va a la pagina anterior
+```
+
+- El viejo `XMLHttpRequest` o el moderno `fetch`: Un objeto para realizar solicitudes HTTP asincronicas
+
+---
+
+
 ## JavaScript IV / Introduccion a arrays y objetos. Metodos de strings y arrays
 ```js
 /*=====================================
