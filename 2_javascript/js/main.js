@@ -437,4 +437,120 @@ let alumnosMasDeUnCuartoDeSiglo = alumnos.filter((alumno) => alumno.edad >= 25);
 console.log(alumnosMasDeUnCuartoDeSiglo);
 
 
-// Continuar desde reduce()
+/*////////////////
+// reduce()
+
+    const suma = array.reduce((acumulador, elemento) => acumulador + elemento, 0)
+
+Proposito: Reduce el array a un unico vlaor
+Retorna: Valor acumulado
+*/
+
+// Ejemplo 1: Sumar decenas
+let decenas = [10, 20, 30];
+let sumaDecenas = decenas.reduce((suma, num) => suma + num, 0);
+console.log(sumaDecenas); // 60
+
+// Ejemplo 2: Sumar propiedades
+let ventas = [
+    { producto: "Camisa", cantidad: 3, precio: 25 },
+    { producto: "Pantalon", cantidad: 2, precio: 40 },
+    { producto: "Zapatos", cantidad: 1, precio: 80 },
+];
+
+let totalVentas = ventas.reduce((total, item) => {
+    return total + (item.cantidad * item.precio);
+}, 0);
+
+console.log(totalVentas); // 235
+
+
+/*////////////////
+// find() y findIndex()
+
+    const encontrado = array.find(elemento => elemento.id === 123);
+    const indice = array.findIndex(elemento => elemento.id === 123);
+
+Proposito: Busca el primer elemento que cumpla una condicion
+Retorna: Elemento o indice (o undefined/-1 si no lo encuentra)
+*/
+
+// Ejemplo 1: Buscar numero
+let numerosRandom = [5, 12, 8, 130, 44];
+let encontrado = numerosRandom.find(num => num > 10);
+console.log(encontrado); // 12
+
+let indiceEncontrado = numerosRandom.findIndex(num => num > 100);
+console.log(indiceEncontrado); // 3
+
+// Ejemplo 2: Buscar usuario activo
+let usuarios = [
+    { id: 1, nombre: "Lautaro", activo: true },
+    { id: 2, nombre: "Nicolas", activo: false },
+    { id: 3, nombre: "Valentin", activo: true },
+];
+
+let usuarioActivo = usuarios.find(user => user.activo);
+console.log(usuarioActivo);
+
+// Ejemplo 3: Encontrar indice de objeto
+let tareas = [
+    { id: 1, descripcion: "Comprar pan", completada: false },
+    { id: 2, descripcion: "Ir a la ferreteria", completada: true },
+    { id: 3, descripcion: "Salir a correr", completada: false },
+];
+
+let indiceTarea = tareas.findIndex(tarea => tarea.completada);
+console.log(indiceTarea); // 1
+
+
+/*////////////////
+// for...of
+
+    for (let elemento of array) {
+    console.log(elemento)
+        if(elemento === "stop") {
+            break;
+        }
+    }
+
+Ventajas: Sintaxis limpia, permite break y continue
+Desventajas: No provee indice automatico
+*/
+
+// Ejemplo 1: Iterar array con posibilidad de break
+const simbolos = ['€', '$', '¥', '£'];
+
+for (let simbolo of simbolos) {
+    if (simbolo === '¥') {
+        break
+    }
+    console.log(simbolo);
+}
+
+
+/*////////////////
+// some() y every()
+
+    let algunoCumple = array.some(elemento => elemento > 0);
+    let todosCumplen = array.every(elemento => elemento > 0)
+
+Proposito: Verifica si alguno/todos cumplen una condicion
+Retorna: Booleano
+*/
+
+let nums = [1, 3, 5, 7, 8];
+let hayPares = nums.some(num => num % 2 === 0);
+console.log(hayPares); // true
+
+let todosPositivos = nums.every(num => num > 0);
+console.log(todosPositivos); // true
+
+let estudiantes = [
+    { nombre: "Axel", nota: 8 },
+    { nombre: "Lucas", nota: 7 },
+    { nombre: "Nicolas", nota: 10 },
+];
+
+let todosAprobaron = estudiantes.every(est => est.nota >= 6);
+console.log(todosAprobaron); // true

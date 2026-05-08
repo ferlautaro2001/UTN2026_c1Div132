@@ -1,9 +1,10 @@
 # UTN 2026 c1 Div 132
 
-## Frontend
-- Prox clase, continuamos maquetando la pagina de apple, creamos mas sections y añadimos media queries para ajustar la distribucion en formato mobile
+## Proxima clase
+- JavaScript VI 1a mitad de clase
+- Repaso general para el parcial 2a
 
-- **Ejemplo bootstrap subido en el moodle**
+- Fecha 1er parcial 15 mayo
 
 ---
 
@@ -73,8 +74,6 @@
 ### [Clase 2hs Protocolo HTTP y lenguaje HTML](https://www.youtube.com/watch?v=l6oF_RpBf64)
 ### [Trailer documental Node.js](https://www.youtube.com/watch?v=SfWPqr04srM)
 
-
----
 
 ---
 
