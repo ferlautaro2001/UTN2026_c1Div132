@@ -17,14 +17,33 @@
             background-color: var(--bg-claro);
             color: white;
         }
+
+        #padre {
+            padding: 15px;
+            border: 2px solid;
+        }
     </style>
 
     <!-- Apuntamos a nuestro JS externo -->
     <script defer src="js/main.js"></script>
 </head>
 <body>
+    <h1 id="titulo">Titulo principal</h1>
 
-    <h1>JavaScript</h1>
-    
+    <p class="mensaje">Primer parrafo</p>
+    <p class="mensaje">Segundo parrafo</p>
+
+    <p id="miParrafo">Texto original</p>
+    <button id="boton">Soy un boton!</button>
+
+    <hr>
+    <div>
+        <input type="text" name="entrada" id="entrada">
+    </div>
+
+    <hr>
+    <div id="padre">
+        <button id="hijo">Boton</button>
+    </div>
 </body>
 </html>

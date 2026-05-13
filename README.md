@@ -1,10 +1,9 @@
 # UTN 2026 c1 Div 132
 
 ## Proxima clase
-- JavaScript VI 1a mitad de clase
 - Repaso general para el parcial 2a
 
-- Fecha 1er parcial 15 mayo
+- **Fecha 1er parcial miercoles 20 mayo**
 
 ---
 
@@ -42,11 +41,31 @@
     - media queries
     - *live coding*
 
----
-
 #### Ejercicio sugerido 1, armen una pagina de recetas con HTML
 
 #### Ejercicio sugerido 2, armen su CV con HTML
+
+---
+
+## Cronograma backend
+Fases para desarrollar nuestro TP Integrador
+
+1. **Version basica y funcional**: API Rest + Vistas en HTML, CSS y JS
+2. **Version optimizada**: Validaciones, mas repuestas, etc
+3. **Modularizar patron MVC**: Organizamos nuestro codigo y separamos la logica en distintos archivos y carpetas
+4. **Usar un motor de plantillas**: Nuestro back nos enviara todo el HTML desde el servidor con `EJS`
+
+---
+
+#### Hasta acá tenemos los fundamentos del TP y de la materia
+
+---
+
+5. **Login con `bcrypt`**: Protegemos nuestras rutas y gestionaremos peticiones de usuarios
+6. **`Multer`**: Subida de archivos estaticos al servidor
+7. **Descarga de excels**: Vamos a poder obtener en formato excel los datos que necesitemos
+8. **Paginacion**: Para ordenar en distintas paginas los resultados
+
 
 ---
 
