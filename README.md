@@ -94,6 +94,21 @@ Fases para desarrollar nuestro TP Integrador
 ### [Trailer documental Node.js](https://www.youtube.com/watch?v=SfWPqr04srM)
 
 
+### Pasos para nuestro TP Integrador
+
+1. **API Rest** basica con vistas `HTML`, `CSS` y `JS`
+2. **Optimizar** nuestra **API Rest**
+3. **Modularizar** nuestra app con el patron **MVC**
+4. Instalaremos un motor de plantillas `EJS` para servir vistas desde el servidor
+5. **Login** y `bcrypt`
+
+---
+
+6. Serviremos archivos estaticos con `Multer`
+7. Descarga excels
+8. Paginacion
+
+
 ---
 
 ## Nombres de los simbolos de programacion en ingles
