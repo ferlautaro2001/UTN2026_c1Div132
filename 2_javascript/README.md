@@ -1,5 +1,58 @@
 # JavaScript
 
+## JavaScript VIII / JSON, asincronia, promesas y fetch, asnyc/await y try...catch
+
+### JSON / JavaScript Object Notation
+JSON *(Notacion de Objetos de JavaScript)* es un formato ligero de intercambio de datos que se convirtio en el estandar para la comunicacion entre aplicaciones en la web. Aunque proviene sintactivamente de JavaScript, es independiente del lenguaje y ampliamente utilizado en todo tipo de sistemas y lenguajes de programacion
+
+JSON es un formato de text plano, como un string, que representa datos estructurados basado en dos estructuras fundamentales
+
+1. **Coleccion de pares nombre/valor**: Equivalente a un objeto en JavaScript
+2. **Lista ordenada de valores**: Equivalente a un array en JavaScript
+
+- Es textual y legible por humanos
+- Es super ligero (ocupa muy poco espacio)
+- Facil de parsear y generar
+- Es independiente del lenguaje (aunque use convenciones de JavaScript)
+
+#### Reglas de sintaxis
+- Los datos estan en pares **nombre/valor**, igual a clave/valor
+- Los datos estan separados por comas
+- Las llaves `{}` representan objetos
+- Los corchetes `[]` representan arrays
+- Las comillas dobles `""` son obligatorias para nombres de propiedades y strings
+
+#### Tipos de datos en JSON
+1. **Strings**: `"texto"` siempre con comillas dobles
+2. **Numbers**: `42`, `3.14`
+3. **Booleans**: `true` o `false`
+4. **Null**: `null` representa un valor nulo
+5. **Objects**: `{"clave": "valor"}`
+6. **Arrays**: `["valor1", "valor2"]`
+
+#### Metodos en JavaScript
+```js
+// Convierte un objeto JavaScript a una cadena (string) JSON
+JSON.stringify();
+
+// Convierte una cadena (string) JSON a un objeto JavaScript
+JSON.parse();
+```
+
+#### Usos comunes de JSON
+1. **Comunicacion cliente servidor**: JSON es el formato estandar para APIs REST
+
+2. **Almacenamiento local**: Guardar datos en el navegador
+
+3. **Configuraciones**: Muchas herramientas usan JSON para configuraciones como `package.json` en Node.js
+
+
+```js
+
+```
+
+---
+
 
 ## JavaScript VII / Callbacks, High Order Functions, Funciones anidadas, Destructuring, Spread Operator y Web APIs
 

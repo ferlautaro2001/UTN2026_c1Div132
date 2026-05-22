@@ -1,9 +1,9 @@
 # UTN 2026 c1 Div 132
 
 ## Proxima clase
-- Repaso general para el parcial 2a
-
-- **Fecha 1er parcial miercoles 20 mayo**
+- Terminar de repasar JavaScript VIII desde comparativa `Promesas` vs `async/await`
+- Clase conceptual de arquitectura cliente-servidor y protocolo HTTP
+- Node.js
 
 ---
 
