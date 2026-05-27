@@ -1,9 +1,7 @@
 # UTN 2026 c1 Div 132
 
 ## Proxima clase
-- Terminar de repasar JavaScript VIII desde comparativa `Promesas` vs `async/await`
-- Clase conceptual de arquitectura cliente-servidor y protocolo HTTP
-- Node.js
+- Node.js, ver importacion y exportacion de modulos y modulo HTTP
 
 ---
 
@@ -141,3 +139,33 @@ Los símbolos de programación tienen nombres específicos en inglés que son fu
 *   **$**: Dollar sign
 *   **%**: Percent
 *   **!**: Exclamation mark
+
+
+---
+
+
+## Codigos de estado HTTP
+Los códigos de estado HTTP son respuestas de tres dígitos que indican el resultado de una solicitud entre un cliente y un servidor, organizados en cinco categorías principales según su primer dígito.
+
+**1xx Informativo**: El servidor recibió la solicitud y continúa el proceso (ej. **100 Continue**).
+
+**2xx Éxito**: La solicitud fue recibida, comprendida y aceptada correctamente.
+*   **200 OK**: Éxito estándar.
+*   **201 Created**: Recurso creado exitosamente.
+*   **204 No Content**: Éxito sin contenido en la respuesta.
+
+**3xx Redirección**: Se requiere una acción adicional para completar la solicitud, generalmente una redirección.
+*   **301 Moved Permanently**: Redirección permanente.
+*   **302 Found**: Redirección temporal.
+*   **304 Not Modified**: El recurso no ha cambiado, usar caché.
+
+**4xx Error del Cliente**: La solicitud contiene sintaxis incorrecta o no puede cumplirse por error del usuario.
+*   **400 Bad Request**: Solicitud incorrecta o malformada.
+*   **401 Unauthorized**: Se requiere autenticación.
+*   **403 Forbidden**: Acceso denegado por permisos.
+*   **404 Not Found**: Recurso no encontrado.
+
+**5xx Error del Servidor**: El servidor falló al procesar una solicitud aparentemente válida.
+*   **500 Internal Server Error**: Error genérico del servidor.
+*   **502 Bad Gateway**: Puerta de enlace o proxy inválido.
+*   **503 Service Unavailable**: Servicio no disponible (sobrecarga/mantenimiento).
