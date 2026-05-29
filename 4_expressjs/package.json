@@ -1,0 +1,15 @@
+{
+  "name": "4_expressjs",
+  "version": "1.0.0",
+  "description": "`Express.js` es una libreria que funciona sobre Node.js, diseñada para facilitar la creacion de servidores web y aplicaciones mas robstas. Simplifica el manejo de rutas, peticiones HTTP, respuestas y otras tareas comunes en el desarrollo de backend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

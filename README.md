@@ -1,7 +1,11 @@
 # UTN 2026 c1 Div 132
 
 ## Proxima clase
-- Node.js, ver importacion y exportacion de modulos y modulo HTTP
+- Crear estructura de directorios de nuestro proyecto para lmacenar la config y la conexion a la BBDD
+- Crearemos un pool de conexiones para poder conectarnos a la BBDD y tirarle sentencias SQL
+- Endpoints GET y GET by id
+- Vistas para consumir estos endpoints
+- Middlewares y CORS
 
 ---
 
@@ -9,6 +13,8 @@
 ### [Clase 2hs / Protocolo HTTP y lenguaje HTML](https://www.youtube.com/watch?v=l6oF_RpBf64)
 
 ### [Boom de la IA y tendencias de recontrataciones para 2027](https://www.youtube.com/watch?v=OFmxKgaLN80)
+
+### [Columna de IA / Emi Garzon](https://www.youtube.com/watch?v=xKS307CE9mY)
 
 ---
 

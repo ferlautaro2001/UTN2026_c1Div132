@@ -74,3 +74,15 @@ const tipoSistema = os.type();
 
 console.log("Memoria libre: ", memoriaLibre); // Memoria libre:  6387765248
 console.log("Tipo de Sistema Operativo: ", tipoSistema); // Tipo de Sistema Operativo:  Linux
+
+
+
+
+/* Cada vez que usamos require(), lo que hacemos es importar un modulo para que podamos usar sus funciones en nuestro archivo actual. Crearemos nuestro propios modulos
+
+Un archivo en una misma carpeta podria ser "nombreArchivos", aca tendremos que referirnos explicitamente a esta carpeta "./nombreArchivo" */
+
+// Vamos a importar la funcion saludar() que escribimos y exportamos en saludos.js
+const saludar = require("./saludos.js"); // Hace falta ser explicitos y referirnos al nivel actual de la carpeta
+
+console.log(saludar("Miguel")); // Holis, Miguel
