@@ -1,16 +1,16 @@
 # UTN 2026 c1 Div 132
 
 ## Proxima clase
-- Crear estructura de directorios de nuestro proyecto para lmacenar la config y la conexion a la BBDD
-- Crearemos un pool de conexiones para poder conectarnos a la BBDD y tirarle sentencias SQL
-- Endpoints GET y GET by id
-- Vistas para consumir estos endpoints
-- Middlewares y CORS
+- Crear vista para consumir GET by id
+- Crear el endpoint POST -> y Vista
+- Crear el endpoint PUT -> y Vista
 
 ---
 
 ## Videos recomendados
 ### [Clase 2hs / Protocolo HTTP y lenguaje HTML](https://www.youtube.com/watch?v=l6oF_RpBf64)
+
+### [Playlist de Cliente-Servidor, HTTP y JSON de TodoCode](https://www.youtube.com/watch?v=lC6JOQLIgp0&list=PLQxX2eiEaqbxx6Ds5bd1F6LZJo7_OnZhV)
 
 ### [Boom de la IA y tendencias de recontrataciones para 2027](https://www.youtube.com/watch?v=OFmxKgaLN80)
 
