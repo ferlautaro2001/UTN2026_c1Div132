@@ -25,7 +25,8 @@ app.use((req, res, next) => {
     next(); // next() da paso a que continue la respuesta o el siguiente middleware (en caso de haberlo)
 });
 
-// TO DO -> Middleware para parsear JSON en las solcitudes POST y PUT
+// Middleware para parsear JSON en las solcitudes POST y PUT
+app.use(express.json()); // sin esto, recibe como undefined
 
 
 
@@ -59,6 +60,57 @@ app.get("/api/products/:id", async (req, res) => {
 
     res.status(200).json({
         payload: rows
+    });
+});
+
+
+// POST product
+app.post("/api/products", async (req, res) => {
+    // Gracias al middleware app.use(express.json()); recibo el JSON como objeto JS al que le puedo aplicar el siguiente destrucuring
+    console.log(req.body);
+    /*{
+        name: 'Milanesa con pure',
+        image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcomoquiero-uploads.s3-accelerate.amazonaws.com%2Fimages%2Frecipes%2F6348.webp&f=1&nofb=1&ipt=b5ddc310e8f55d56e45b50cd5d36060579357952f993b359785aa40496b7b8cd',
+        category: 'food',
+        price: '123'
+    }*/
+    
+    const { name, image, category, price } = req.body;
+
+    console.log(name);
+    
+    const sql = "INSERT INTO products (name, image, category, price) VALUES (?, ?, ?, ?)";
+
+    await connection.query(sql, [name, image, category, price]);
+
+    res.status(200).json({
+        message: "Producto creado con exito"
+    });
+});
+
+
+// UPDATE product
+app.put("/api/products", async (req, res) => {
+    const { id, name, image, price, category } = req.body;
+
+    const sql = "UPDATE products SET name = ?, image = ?, price = ?, category = ?, WHERE id = ?";
+
+    await connection.query(sql, [name, image, price, category, id]);
+
+    return res.status(200).json({
+        message: "Producto actualizado correctamente"
+    });
+});
+
+
+// DELETE product
+app.delete("/api/products/:id", async (req, res) => {
+    const id = req.params.id;
+
+    await connection.query("DELETE FROM products WHERE id = ?", [id]);
+
+    res.status(200).json({
+        message: `Producto con id ${id} eliminado exitosamente`
     });
 });
 

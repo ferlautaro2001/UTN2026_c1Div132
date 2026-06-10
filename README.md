@@ -1,9 +1,10 @@
 # UTN 2026 c1 Div 132
 
 ## Proxima clase
-- Crear vista para consumir GET by id
-- Crear el endpoint POST -> y Vista
-- Crear el endpoint PUT -> y Vista
+- Crear vista PUT para actualizar los productos desde el dashboard
+- Optimizaciones de endpoints
+- Optimizaciones de vistas
+- Modularizacion con el patron MVC
 
 ---
 
