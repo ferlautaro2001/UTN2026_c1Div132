@@ -47,6 +47,19 @@ fetch('/endpoint', {
 .then(data => console.log(data));
 ```
 
+#### EXTRA / Para parsear los datos enviados de forma nativa con HTML `<forms>` usariamos el siguiente middleware
+```js
+app.use(
+    express.urlencoded({
+        extended: true,
+        inflate: true,
+        limit: "1mb",
+        parameterLimit: 5000,
+        type: "application/x-www-form-urlencoded",
+    })
+);
+```
+
 
 ---
 

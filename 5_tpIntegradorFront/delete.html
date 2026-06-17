@@ -84,21 +84,34 @@
     <script>
         const contenedorProductos = document.getElementById("contenedor-productos");
         const getProductForm = document.getElementById("getProduct-form");
+        const urlBase = "http://localhost:3000/api/products";
 
         getProductForm.addEventListener("submit", async event => {
             event.preventDefault(); //Evitamos el envio por defecto HTML del formulario
 
-            // Extraemos el id del producto
+            // Optimizacion 1: Para extraer solamente un valor, como el id en nuestro miniformulario, podemos saltarnos el FormData + Object.fromEntries
             const idProd = event.target.idProd.value.trim();
+
+            // Optimizacion 2: Nos aseguramos de que se haya enviado un id valido
+            if (!idProd) {
+                mostrarError("Ingresá un id válido");
+                return;
+            }
             
             try {
-                // Vamos a hacer el fetch a una URL personalizada
-                const response = await fetch(`http://localhost:3000/api/products/${idProd}`);
+                // Optimizacion 3: Guardamos en una variable aparte la URL base para no hardcodearla aca
+                const response = await fetch(`${urlBase}/${idProd}`);
                 console.log(response);
 
                 // Procesamos los datos que devuelve el servidor
                 const datos = await response.json();
                 console.log(datos);
+
+                // Optimizacion 4: Mostramos por pantalla el error (400 o 500) que nos devuelve el servidor
+                if (!response.ok) {
+                    mostrarError(data.message);
+                    return;
+                }
 
                 const producto = datos.payload[0];
 
@@ -116,6 +129,9 @@
 
             } catch (error) {
                 console.error("Error al obtener el producto");
+
+                // Optimizacion 5: Mostramos errores de red (en el try catch del fetch no capturamos errores 400 o 500)
+                mostrarError("Error de conexion con el servidor")
             }
         });
 
@@ -147,6 +163,19 @@
             });
         }
 
+        function mostrarError(mensaje) {
+            contenedorProductos.innerHTML = `
+                <p class="mensaje mensaje-error">${mensaje}</p>
+            `;
+        }
+
+        function mostrarExito(mensaje) {
+            contenedorProductos.innerHTML = `
+                <p class="mensaje mensaje-exito">${mensaje}</p>
+            `;
+        }
+
+
         // Funcion para realizar una operacion delete
         async function eliminarProducto(id) {
             try {
@@ -156,11 +185,20 @@
 
                 const result = await response.json();
 
-                alert(result.message);
+                // Optimizacion 6: Manejamos un error no ok
+                if (!response.ok) {
+                    mostrarError(result.message);
+                    return;
+                }
+
+                // Optimizacion 7: En lugar de un alert bloqueante, mostramos un mensaje de exito, similar el mensaje de error
                 console.log(result.message);
 
+                // Gracias a mostrarExito, ya no hace falta limpiar la pantalla porque ya reemplazamos el producto por un mensaje en verde
+                mostrarExito(result.message);
                 // Limpiamos visualmente el producto que eliminamos de la pantalla
-                contenedorProductos.innerHTML = "";
+                // contenedorProductos.innerHTML = "";
+
 
             } catch (error) {
                 console.error("Error en la solicitud DELETE: ", error);

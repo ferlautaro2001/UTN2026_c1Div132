@@ -1,10 +1,10 @@
 # UTN 2026 c1 Div 132
 
 ## Proxima clase
-- Crear vista PUT para actualizar los productos desde el dashboard
-- Optimizaciones de endpoints
-- Optimizaciones de vistas
-- Modularizacion con el patron MVC
+- Terminar optimizacion de endpoint PUT
+- Terminar optimizaciones de vistas POST y PUT
+- **Modularizacion con el patron MVC**
+- Setup para EJS
 
 ---
 

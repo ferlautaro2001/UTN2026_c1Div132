@@ -78,15 +78,27 @@
             try {
 
                 const response = await fetch(url);
-                const data = await response.json();
+                console.log(response);
+
+                // Optimizacion 1: Verificamos que la respuesta HTTP fue exitosa
+                if (!response.ok) {
+                    // Traemos el message que devuelve el 500
+                    const parsedResponse = await response.json();
+                    throw new Error(`${parsedResponse.message}`);
+                }
+
+                // Optimizacion 2: Destructuring directo
+                const { payload } = await response.json();
+                // const productos = data.payload;
+               console.log(payload);
                 
-                const productos = data.payload;
-                console.log(productos);
-                
-                renderizarProductos(productos);
+                renderizarProductos(payload);
 
             } catch (error) {
                 console.error(error);
+                // Optimizacion 3: Creamos una funcion que crea parrafos con formato error y el mensaje
+                // Mostramos el error en el DOM
+                mostrarError(error);
             }
 
         }
@@ -106,6 +118,12 @@
             });
 
             contenedorProductos.innerHTML = htmlProductos;
+        }
+
+        function mostrarError(mensaje) {
+            contenedorProductos.innerHTML = `
+                <p class="mensaje mensaje-error">${mensaje}</p>
+            `;
         }
 
         obtenerProductos();
