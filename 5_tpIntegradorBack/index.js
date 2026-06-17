@@ -28,6 +28,9 @@ app.use((req, res, next) => {
 // Middleware para parsear JSON en las solcitudes POST y PUT
 app.use(express.json()); // sin esto, recibe como undefined
 
+// Para un eventual envio nativo de datos con HTML <form>
+// app.use() -> Middleware para parsear multipart-formData
+
 
 
 /////////////////////
@@ -91,9 +94,10 @@ app.post("/api/products", async (req, res) => {
 
 // UPDATE product
 app.put("/api/products", async (req, res) => {
+    // Gracias al middleware app.use(express.json()); ahora en lugar de un JSON, nuestro endpoint recibe un objeto
     const { id, name, image, price, category } = req.body;
 
-    const sql = "UPDATE products SET name = ?, image = ?, price = ?, category = ?, WHERE id = ?";
+    const sql = "UPDATE products SET name = ?, image = ?, price = ?, category = ? WHERE id = ?";
 
     await connection.query(sql, [name, image, price, category, id]);
 
