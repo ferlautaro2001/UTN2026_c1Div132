@@ -1,8 +1,49 @@
 # UTN 2026 c1 Div 132
 
-## Proxima clase
+### Recomendaciones para elaborar el TP -> Recomendacion en orden
+#### **Todo lo que vayan haciendo, vayan testeandolo paso por paso**
+1. Armar la BBDD con inserciones
+2. Hacer el primer endpoint filtrando productos activos
+3. Desarrollar el Front del TP consumiendo este endpoint con productos activos + funcionalidad carrito (dejaremos el jsPDF y el POST a Ventas para la prox clase)
+4. Ir haciendo endpoint + vista
+    - GET + vista
+    - GET by id + vista
+    - POST + vista
+    - PUT + vista
+    - DELETE + vista
+
+5. Modularizar todo y aplicar patron MVC
+
+6. Vistas con EJS (Setup + Migracion)
+
+7. Login + bcrypt
+
+---
+
+## Clase viernes 19/06
 - **Modularizacion con el patron MVC**
+
+
+## Clase miercoles 24/06
 - Setup para EJS
+- Migramos las vistas EJS
+- Funcionalidad `jsPDF` + POST a ventas en el Frontend
+
+
+## Clase viernes 26/06
+- Login (endpoint + vista)
+- Incorporamos `bcrypt`
+
+
+## Clase miercoles 01/07
+- Descarga de Excels
+- Multer
+- O ambos!
+
+## DEFENSA 03/07 -> Presenctacion de proyectos y defensa en vivo
+- Camara prendida
+
+## RECUPERATORIO 08/07 -> 
 
 ---
 

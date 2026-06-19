@@ -1,5 +1,8 @@
 # TP Integrador 2026 c1 Div132 / Backend
 
+## Resumen Modelo Vista Controlador
+![Resumen MVC](resumenMVC.png)
+
 
 # ////////////////////////////////////////////////////
 # CRUD version I: *MVC con EJS*
