@@ -6,6 +6,7 @@ import environments from "./src/api/config/environments.js";
 import { productRoutes } from "./src/api/routes/index.js";
 import cors from "cors";
 import { loggerURL } from "./src/api/middlewares/middlewares.js";
+import { join, __dirname } from "./src/api/utils/index.js"; // Importamos la configuracion para trabajar con rutas de /utils
 
 
 /////////////////////
@@ -22,6 +23,9 @@ app.use(cors()); // Middleware basico para permitir todas las solicitudes
 app.use(express.json()); // sin esto, recibe como undefined
 
 app.use(loggerURL);
+
+app.use(express.static(join(__dirname, "src/public"))); // Middleware para servir archivos estaticos
+// Gracias a esta configuracion, ya puedo acceder a http://localhost:3000/css/styles.css -> y obtener el archivo css que se encuentra en la ruta "src/public/css/styles.css"
 
 
 

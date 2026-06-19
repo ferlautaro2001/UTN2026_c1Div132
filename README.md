@@ -18,10 +18,13 @@
 
 7. Login + bcrypt
 
+
 ---
+
 
 ## Clase viernes 19/06
 - **Modularizacion con el patron MVC**
+- Setup EJS sirviendo archivos estaticos con `express.static`
 
 
 ## Clase miercoles 24/06
@@ -40,10 +43,10 @@
 - Multer
 - O ambos!
 
-## DEFENSA 03/07 -> Presenctacion de proyectos y defensa en vivo
+## DEFENSA 03/07 -> Presentacion de proyectos y defensa en vivo
 - Camara prendida
 
-## RECUPERATORIO 08/07 -> 
+## RECUPERATORIO 08/07 -> Para que quienes desaprobaron la defensa puedan obtener promocion directa
 
 ---
 
