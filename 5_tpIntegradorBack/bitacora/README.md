@@ -1,5 +1,16 @@
 # Bitacora
 
+### Que hace la palabra clave `return`
+La palabra clave **return** en **JavaScript** cumple dos funciones principales: **finaliza inmediatamente la ejecución** de la función actual y **devuelve un valor** específico al código que llamó a la función.
+
+*   **Control de flujo:** Al encontrarse con `return`, el intérprete sale de la función sin ejecutar ninguna línea de código posterior, lo que permite crear **finalizaciones tempranas** (early exits) para optimizar el código.
+*   **Devolución de datos:** El valor especificado después de `return` se envía al contexto llamador y puede ser almacenado en una variable o usado en expresiones. Si la expresión se omite, la función devuelve **`undefined`**.
+
+Por ejemplo, en `function sumar(a, b) { return a + b; }`, la función detiene su ejecución al calcular la suma y entrega ese resultado para su uso posterior.
+
+
+---
+
 ### Que hace el middleware `app.use(express.json())`?
 *Por que si no uso app.use(express.json()); me devuelve undefined el req.body?*
 

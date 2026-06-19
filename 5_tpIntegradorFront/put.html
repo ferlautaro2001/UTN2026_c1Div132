@@ -91,7 +91,7 @@
 
             // Optimizacion 2: Nos aseguramos de que se haya enviado un id valido
             if (!idProd) {
-                mostrarError("Ingresá un id válido");
+                mostrarError("error", "Ingresá un id válido");
                 return;
             }
 
@@ -107,7 +107,7 @@
 
                 // Optimizacion 4: Mostramos por pantalla el error (400 o 500) que nos devuelve el servidor
                 if (!response.ok) {
-                    mostrarError(data.message);
+                    mostrarError("error", data.message);
                     return;
                 }
 
@@ -129,7 +129,7 @@
                 console.error("Error al obtener el producto");
 
                 // Optimizacion 5: Mostramos errores de red (en el try catch del fetch no capturamos errores 400 o 500)
-                mostrarError("Error de conexion con el servidor")
+                mostrarError("error", "Error de conexion con el servidor")
             }
         });
 
@@ -161,9 +161,10 @@
             });
         }
 
-        function mostrarError(mensaje) {
+        function mostrarMensaje(tipo, mensaje) {
+            contenedorForm.innerHTML = "";
             contenedorProductos.innerHTML = `
-                <p class="mensaje mensaje-error">${mensaje}</p>
+                <p class="mensaje mensaje-${tipo}">${mensaje}</p>
             `;
         }
 
@@ -247,21 +248,22 @@
                 });
 
                 console.log(response);
-                const parsedResponse = await response.json();
+                const result = await response.json();
 
-                console.log(parsedResponse);
-                
-                console.log(parsedResponse.message);
-                alert(parsedResponse.message);
+                // Optimizacion 6: Filtramos respuesta no ok
+                if(!response.ok) {
+                    mostrarMensaje("error", result.message);
+                    return;
+                }
 
-                // Limpiamos visualmente la pagina
-                contenedorProductos.innerHTML = "";
-                contenedorForm.innerHTML = "";
-                
+
+                mostrarMensaje("exito", result.message);
 
 
             } catch (error) {
                 console.error(error);
+
+                mostrarMensaje("error", error)
             }
 
         }

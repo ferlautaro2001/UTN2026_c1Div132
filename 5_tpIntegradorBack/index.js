@@ -198,7 +198,7 @@ app.post("/api/products", validateProduct, async (req, res) => {
         const [rows] = await connection.query(sql, [name, image, category, price]);
     
         // Optimizacion 4: En lugar de 201, devolvemos un 201 "Created"
-        res.status(200).json({
+        res.status(201).json({
             message: "Producto creado con exito",
             productId: rows.insertId
         });
@@ -209,23 +209,50 @@ app.post("/api/products", validateProduct, async (req, res) => {
         // Optimizacion 5: Devolvemos un codigo de estado 500
         res.status(500).json({
             message: "Error interno del servidor"
-        })
+        });
     }
 });
 
 
 // UPDATE product
 app.put("/api/products", async (req, res) => {
-    // Gracias al middleware app.use(express.json()); ahora en lugar de un JSON, nuestro endpoint recibe un objeto
-    const { id, name, image, price, category } = req.body;
+    // Optimizacion 1: Manejo de errores con try...catch
+    try {
+        // Gracias al middleware app.use(express.json()); ahora en lugar de un JSON, nuestro endpoint recibe un objeto
+        const { id, name, image, price, category } = req.body;
 
-    const sql = "UPDATE products SET name = ?, image = ?, price = ?, category = ? WHERE id = ?";
+        // Optimizacion 2: Validamos que vengan los campos necesarios antes de tocar la BBDD
+        if (!name || !image || !price || !category) {
+            return res.status(400).json({
+                message: "Todos los campos del formulario son requeridos"
+            });
+        }
+    
+        const sql = "UPDATE products SET name = ?, image = ?, price = ?, category = ? WHERE id = ?";
+    
+        // Guardamos el resultado de la conexion que nos bridara info para la optimziacion
+        const [result] = await connection.query(sql, [name, image, price, category, id]);
+        
+        // Optimizacion 3: Verificamos si realmente se actualizo algo, guardando la respuesta de la BBDD
+        if (result.affectedRows === 0) {
+            return res.status(404).json({
+                message: "No se actualizó ningún campo"
+            })
+        }
+    
+        return res.status(200).json({
+            message: "Producto actualizado correctamente"
+        });
 
-    await connection.query(sql, [name, image, price, category, id]);
 
-    return res.status(200).json({
-        message: "Producto actualizado correctamente"
-    });
+    } catch (error) {
+        console.log(error);
+
+        // Optimizacion 4: Devolvemos un codigo de estado 500
+        res.status(500).json({
+            message: "Error interno del servidor"
+        });
+    }
 });
 
 

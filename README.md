@@ -1,8 +1,6 @@
 # UTN 2026 c1 Div 132
 
 ## Proxima clase
-- Terminar optimizacion de endpoint PUT
-- Terminar optimizaciones de vistas POST y PUT
 - **Modularizacion con el patron MVC**
 - Setup para EJS
 
