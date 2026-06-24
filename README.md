@@ -31,6 +31,8 @@
 - Setup para EJS
 - Migramos las vistas EJS
 - Funcionalidad `jsPDF` + POST a ventas en el Frontend
+    - Endpoint para crear ventas
+    - Peticion fetch desde el frontend para poder registrar esa venta al pulsar el boton de confirmar compra
 
 
 ## Clase viernes 26/06

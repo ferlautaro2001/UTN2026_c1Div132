@@ -1,5 +1,24 @@
 # Bitacora
 
+## Qué hacen los controladores en una aplicacion express?
+**Los controladores en Express** son funciones que reciben las solicitudes HTTP (request) y generan las respuestas HTTP (response). Su responsabilidad principal es **gestionar la lógica de la ruta**, lo que incluye:
+
+*   **Validar** los parámetros de entrada, el cuerpo de la solicitud y las consultas.
+*   **Orquestar** la lógica de negocio, generalmente delegando operaciones complejas en capas de **Servicios** (lógica pura) y **Repositorios** (acceso a datos).
+*   **Formatear y devolver** la respuesta adecuada al cliente con el código de estado HTTP correspondiente (ej. 200, 404, 500).
+
+Para mantener el código limpio y escalable, se recomienda **no incluir la lógica de negocio o consultas a bases de datos directamente en el controlador**, sino actuar como un intermediario que conecta la capa de presentación (HTTP) con la lógica de la aplicación.
+
+---
+
+
+
+## Qué es `phpmyadmin`?
+
+**phpMyAdmin** es una herramienta de código abierto escrita en **PHP** diseñada para administrar bases de datos **MySQL** y **MariaDB** a través de una interfaz gráfica web. Permite a los usuarios gestionar sus bases de datos mediante un navegador, facilitando operaciones como **crear, eliminar y modificar** bases de datos, tablas, campos e índices, así como **ejecutar sentencias SQL**, importar/exportar datos en diversos formatos (CSV, SQL, PDF, XML) y administrar privilegios de usuarios.
+
+Es una solución popular porque no requiere conocimientos avanzados de comandos para tareas básicas, aunque también soporta consultas complejas. Se utiliza frecuentemente en entornos de desarrollo local (como **XAMPP**) y es el administrador de base de datos por defecto en muchos paneles de control de hosting (como **cPanel**). El proyecto, lanzado originalmente en 1998, está disponible bajo la licencia **GPL Versión 2** y se encuentra actualmente en mantenimiento activo, con la última versión estable 5.2.2 publicada en enero de 2025.
+
 ### Que hace la palabra clave `return`
 La palabra clave **return** en **JavaScript** cumple dos funciones principales: **finaliza inmediatamente la ejecución** de la función actual y **devuelve un valor** específico al código que llamó a la función.
 

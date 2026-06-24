@@ -28,5 +28,6 @@ router.put("/", modifyProduct);
 // DELETE product
 router.delete("/:id", validateId, removeProduct);
 
+
 // Exportamos todas las rutas y las centralizamos en el archivo de barril -> index.js
 export default router;
