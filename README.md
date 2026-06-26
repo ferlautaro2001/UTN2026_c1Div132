@@ -37,15 +37,18 @@
 
 ## Clase viernes 26/06
 - Login (endpoint + vista)
-- Incorporamos `bcrypt`
 
 
 ## Clase miercoles 01/07
-- Descarga de Excels
-- Multer
-- O ambos!
+- Incorporamos [bcrypt](https://www.npmjs.com/package/bcrypt)
+    - Descarga de Excels
+    - Multer
+- Opcion de repaso
 
 ## DEFENSA 03/07 -> Presentacion de proyectos y defensa en vivo
+- **PUEDEN ENTREGAR HASTA LAS 08:29 del 03/07**
+- Usaremos el [chat de la comision](https://meet.google.com/een-xobd-kbr)
+    - A partir de acá los profes iremos llamando para defender en distintos meet
 - Camara prendida
 
 ## RECUPERATORIO 08/07 -> Para que quienes desaprobaron la defensa puedan obtener promocion directa

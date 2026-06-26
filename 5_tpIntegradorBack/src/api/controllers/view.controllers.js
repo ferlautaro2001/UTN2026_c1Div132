@@ -34,6 +34,7 @@ export const indexView = async (req, res) => {
 ////////////////////
 // Vista obtener producto
 export const getProductView = (req, res) => {
+
     res.render("get", {
         title: "Consultar",
         about: "Consultar producto por id: "

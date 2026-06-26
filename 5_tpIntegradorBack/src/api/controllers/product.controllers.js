@@ -11,6 +11,7 @@ export const getAllProducts = async (req, res) => {
     // Optimizacion 1: Manejo de errores con try...catch
     try {
 
+        // El controlador delega la comunicacion con la Base de Datos al modelo
         const [rows, fields] = await ProductModels.selectAllProducts();
 
         // Optimizacion 4: En caso de no haber productos, devolvemos un 404

@@ -132,3 +132,9 @@ header, .enlaces {
     background-color: var(--msg-exito-bg);
     border: 1px solid var(--msg-exito-border);
 }
+
+#form-logout {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
