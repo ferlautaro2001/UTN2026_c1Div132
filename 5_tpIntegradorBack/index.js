@@ -3,7 +3,7 @@
 import express from "express";
 const app = express();
 import environments from "./src/api/config/environments.js";
-import { authRoutes, productRoutes, viewRoutes } from "./src/api/routes/index.js";
+import { authRoutes, productRoutes, userRoutes, viewRoutes } from "./src/api/routes/index.js";
 import cors from "cors";
 import { loggerURL, middlewareSimpatico } from "./src/api/middlewares/middlewares.js";
 import { join, __dirname } from "./src/api/utils/index.js"; // Importamos la configuracion para trabajar con rutas de /utils
@@ -33,7 +33,7 @@ app.use(express.urlencoded({
 
 app.use(loggerURL);
 
-app.use(middlewareSimpatico);
+// app.use(middlewareSimpatico);
 
 app.use(express.static(join(__dirname, "src/public"))); // Middleware para servir archivos estaticos
 // Gracias a esta configuracion, ya puedo acceder a http://localhost:3000/css/styles.css -> y obtener el archivo css que se encuentra en la ruta "src/public/css/styles.css"
@@ -156,8 +156,7 @@ app.get("/", (req, res) => {
 app.use("/api/products", productRoutes); // Rutas de producto
 app.use("/dashboard", viewRoutes) // Rutas de vista
 app.use("/login", authRoutes); // Rutas de autenticacion
-
-// app.use("/api/users", userRoutes);
+app.use("/api/users", userRoutes); // Rutas de usuario
 
 
 

@@ -81,7 +81,7 @@ export const createProduct = async (req, res) => {
     // Optimizacion 2: Manejamos los errores en un bloque try...catch
 
     try {
-        // Gracias al middleware router.use(express.json()); recibo el JSON como objeto JS al que le puedo aplicar el siguiente destrucuring
+        // Gracias al middleware app.use(express.json()); recibo el JSON como objeto JS al que le puedo aplicar el siguiente destrucuring
         console.log(req.body);
         /*{
             name: 'Milanesa con pure',
